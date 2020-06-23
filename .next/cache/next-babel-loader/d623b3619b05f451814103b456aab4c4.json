@@ -1,0 +1,1 @@
+{"ast":null,"code":"import About from \"../src/About\";\nexport default About;","map":{"version":3,"sources":["/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/pages/about.js"],"names":["About"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,cAAlB;AAEA,eAAeA,KAAf","sourcesContent":["import About from \"../src/About\";\n\nexport default About"]},"metadata":{},"sourceType":"module"}

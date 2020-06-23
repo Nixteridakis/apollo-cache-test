@@ -1,0 +1,1 @@
+{"ast":null,"code":"import '../src/App.css';","map":{"version":3,"sources":["/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/pages/_app.js"],"names":[],"mappings":"AAAA,OAAO,gBAAP","sourcesContent":["import '../src/App.css';\n"]},"metadata":{},"sourceType":"module"}
