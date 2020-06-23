@@ -1,2 +1,3 @@
 # apollo-cache-test
-A quick repo to test how Apollo cache data and how it can be retrieved
+
+A quick repo to test how Apollo caches GraphQL data and how it can be retrieved afterwards without hitting the db again.
