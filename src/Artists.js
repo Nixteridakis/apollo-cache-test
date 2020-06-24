@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 const Artists = () =>{
 
-    return(<div>kj</div>)
+    return(<div></div>)
 }
 
 export default Artists
