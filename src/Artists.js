@@ -19,9 +19,13 @@ const ArtistsList = () => {
     const { data } = useQuery(ARTISTS_QUERY,{
       variables: {
         offset,
-        limit
-      }
+        limit,
+      },
+      // fetchPolicy: 'cache-and-network',
+      notifyOnNetworkStatusChange: true,
     });
+
+    console.log(data)
 
     const handlePageChange = (event, value) => {
       setPage(value);

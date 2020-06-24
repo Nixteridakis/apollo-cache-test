@@ -2088,8 +2088,11 @@ const ArtistsList = () => {
     variables: {
       offset,
       limit
-    }
+    },
+    // fetchPolicy: 'cache-and-network',
+    notifyOnNetworkStatusChange: true
   });
+  console.log(data);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -2098,13 +2101,12 @@ const ArtistsList = () => {
 
   const count = data === null || data === void 0 ? void 0 : data.Artist_aggregate.aggregate.count;
   const totalPages = Math.ceil(count / limit);
-  console.log(data);
   const artist = data === null || data === void 0 ? void 0 : data.Artist.map((x, index) => {
     return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ListItem"], {
       key: x.ArtistId,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 40
       },
       __self: undefined
     }, x.Name);
@@ -2113,27 +2115,27 @@ const ArtistsList = () => {
     className: "artists-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     variant: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: undefined
   }, "List of artists"), __jsx("div", {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["List"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: undefined
   }, artist), __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_4__["Pagination"], {
@@ -2160,7 +2162,7 @@ const ArtistsList = () => {
     className: "goBack",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: undefined
   }, "HOME")));
@@ -2171,13 +2173,13 @@ function Artists() {
     client: _client__WEBPACK_IMPORTED_MODULE_6__["default"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: this
   }, __jsx(ArtistsList, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 64
     },
     __self: this
   }));
