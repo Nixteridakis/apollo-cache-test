@@ -4769,7 +4769,7 @@ exports.push([module.i, ".cached{ \n  margin: 50px;\n}\n\n.App {\n  text-align: 
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/next/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/next/node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".artists-container{\n    margin: 0 auto;\n    width: -moz-fit-content;\n    width: fit-content;\n}", "",{"version":3,"sources":["Artists.css"],"names":[],"mappings":"AAAA;IACI,cAAc;IACd,uBAAkB;IAAlB,kBAAkB;AACtB","file":"Artists.css","sourcesContent":[".artists-container{\n    margin: 0 auto;\n    width: fit-content;\n}"]}]);
+exports.push([module.i, ".artists-container{\n    margin: 0 auto;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n\n.goBack{\n    margin: 100px !important;\n}", "",{"version":3,"sources":["Artists.css"],"names":[],"mappings":"AAAA;IACI,cAAc;IACd,uBAAkB;IAAlB,kBAAkB;AACtB;;AAEA;IACI,wBAAwB;AAC5B","file":"Artists.css","sourcesContent":[".artists-container{\n    margin: 0 auto;\n    width: fit-content;\n}\n\n.goBack{\n    margin: 100px !important;\n}"]}]);
 
 
 /***/ }),

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Button } from '@material-ui/core';
 
 import { useQuery } from '@apollo/react-hooks';
-import Link from 'next/link' ;
+import Link from 'next/link';
 
 import {MAIN_QUERY, MAIN_QUERY_CACHE} from './queries';
 import client from './client'
@@ -21,7 +21,6 @@ const App = () => {
     }
   });
 
-
   const ReadmyQyery = (id) => {
     const myCache = client.readQuery({
       query: MAIN_QUERY,
@@ -29,7 +28,6 @@ const App = () => {
     });
     setArtist(myCache.Artist[0].Name)
   }
-
 
   return (
     <UserContext.Provider value={[store,setStore]}>

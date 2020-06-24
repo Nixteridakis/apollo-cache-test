@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Link from 'next/link' ;
 
-import { Typography, List, ListItem } from '@material-ui/core';
+import { Typography, List, ListItem, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Pagination } from '@material-ui/lab';
 
@@ -29,22 +30,18 @@ const ArtistsList = () => {
 
     const count = data?.Artist_aggregate.aggregate.count ;
     const totalPages = Math.ceil(count / limit);
-    console.log(data)
+
     const artist = data?.Artist.map((x,index) => {
       return(
-        <ListItem key={x.ArtistId}>
-          {x.Name}
-          </ListItem>
-        )
+        <ListItem key={x.ArtistId}>{x.Name}</ListItem>
+      )
     })
 
     return(
       <div className="artists-container">
           <Typography variant="h2">List of artists</Typography>
           <div className={classes.root}>
-          <List>
-            {artist}
-          </List>
+          <List>{artist}</List>
           <Pagination 
             count={totalPages} 
             page={page}
@@ -52,6 +49,7 @@ const ArtistsList = () => {
             onChange={handlePageChange}
             />    
           </div>
+          <Link href="/"><Button size="large" variant="outlined" color="secondary" className="goBack">HOME</Button></Link>
       </div>
     )
 }
