@@ -117,16 +117,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Artists; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
-/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./client */ "./src/client.js");
 /* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./queries */ "./src/queries.js");
 var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/Artists.js";
@@ -140,58 +141,108 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Artists = () => {
-  const {
-    datas
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_6__["ARTISTS_QUERY"]);
+const ArtistsList = () => {
+  const limit = 10;
   const classes = useStyles();
-  return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["ApolloProvider"], {
-    client: _client__WEBPACK_IMPORTED_MODULE_5__["default"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }, __jsx("div", {
+  const {
+    0: page,
+    1: setPage
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1);
+  const {
+    0: offset,
+    1: setOffset
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])((page - 1) * limit);
+  const {
+    data
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_6__["ARTISTS_QUERY"], {
+    variables: {
+      offset,
+      limit
+    }
+  });
+
+  const handlePageChange = (event, value) => {
+    setPage(value);
+    setOffset((value - 1) * limit);
+  };
+
+  const count = data === null || data === void 0 ? void 0 : data.Artist_aggregate.aggregate.count;
+  const totalPages = Math.ceil(count / limit);
+  console.log(data);
+  const artist = data === null || data === void 0 ? void 0 : data.Artist.map((x, index) => {
+    return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["ListItem"], {
+      key: x.ArtistId,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: undefined
+    }, x.Name);
+  });
+  return __jsx("div", {
     className: "artists-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 42
     },
     __self: undefined
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
     variant: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 43
     },
     __self: undefined
   }, "List of artists"), __jsx("div", {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 44
     },
     __self: undefined
-  }, __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_4__["Pagination"], {
-    count: 10,
-    color: "primary",
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["List"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 45
     },
     __self: undefined
-  }))));
+  }, artist), __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__["Pagination"], {
+    count: totalPages,
+    page: page,
+    color: "primary",
+    onChange: handlePageChange,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  })));
 };
 
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["makeStyles"])(theme => ({
+function Artists() {
+  return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
+    client: _client__WEBPACK_IMPORTED_MODULE_5__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, __jsx(ArtistsList, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }));
+}
+;
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(theme => ({
   root: {
     '& > *': {
       marginTop: theme.spacing(2)
     }
   }
 }));
-/* harmony default export */ __webpack_exports__["default"] = (Artists);
 
 /***/ }),
 
@@ -267,11 +318,16 @@ const MAIN_QUERY_CACHE = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
   }
 `;
 const ARTISTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
-  query {
-    Artist {
+  query($offset: Int, $limit: Int) {
+    Artist(offset: $offset, limit: $limit) {
       Name
       ArtistId
     }
+    Artist_aggregate {
+      aggregate {
+        count
+    }
+  }
   }
 `; // const GET_DOG_PHOTO = gql`
 //   query Dog($breed: String!) {

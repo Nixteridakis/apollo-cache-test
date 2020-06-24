@@ -27,11 +27,16 @@ export const MAIN_QUERY_CACHE = gql`
 `;
 
 export const ARTISTS_QUERY = gql`
-  query {
-    Artist {
+  query($offset: Int, $limit: Int) {
+    Artist(offset: $offset, limit: $limit) {
       Name
       ArtistId
     }
+    Artist_aggregate {
+      aggregate {
+        count
+    }
+  }
   }
 `;
 
