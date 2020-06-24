@@ -5,24 +5,24 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Pagination } from '@material-ui/lab';
 
-import { ApolloProvider } from '@apollo/react-hooks';
-import client from './client';
 import {ARTISTS_QUERY} from './queries';
+import { ApolloProvider } from '@apollo/react-hooks';
+import client from './client'
 
-const Artists = () => {
+const ArtistsList = () => {
 
-    const { datas } = useQuery(ARTISTS_QUERY);
+    const { data } = useQuery(ARTISTS_QUERY);
     const classes = useStyles();
 
+    console.log(data)
+
     return(
-      <ApolloProvider client={client}>
         <div className="artists-container">
             <Typography variant="h2">List of artists</Typography>
             <div className={classes.root}>
                 <Pagination count={10} color="primary" />    
             </div>
         </div>
-      </ApolloProvider>
     )
 }
 
@@ -34,4 +34,9 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default Artists
+export default function Artists (){
+  return(    
+    <ApolloProvider client={client}>
+      <ArtistsList/>
+    </ApolloProvider>)
+};
