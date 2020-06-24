@@ -2462,7 +2462,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**************************************************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
   \**************************************************************************************************************************************************************************************************************************************/
@@ -2485,5 +2485,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map
