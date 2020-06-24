@@ -119,61 +119,179 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
-/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/lab */ "@material-ui/lab");
+/* harmony import */ var _material_ui_lab__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_lab__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./client */ "./src/client.js");
+/* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./queries */ "./src/queries.js");
 var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/Artists.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(theme => ({
-  root: {
-    '& > *': {
-      marginTop: theme.spacing(2)
-    }
-  }
-}));
+
+
+
+
 
 const Artists = () => {
+  const {
+    datas
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_6__["ARTISTS_QUERY"]);
   const classes = useStyles();
-  return __jsx("div", {
+  return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["ApolloProvider"], {
+    client: _client__WEBPACK_IMPORTED_MODULE_5__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("div", {
     className: "artists-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: undefined
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     variant: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: undefined
   }, "List of artists"), __jsx("div", {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: undefined
-  }, __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_3__["Pagination"], {
+  }, __jsx(_material_ui_lab__WEBPACK_IMPORTED_MODULE_4__["Pagination"], {
     count: 10,
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: undefined
-  })));
+  }))));
 };
 
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["makeStyles"])(theme => ({
+  root: {
+    '& > *': {
+      marginTop: theme.spacing(2)
+    }
+  }
+}));
 /* harmony default export */ __webpack_exports__["default"] = (Artists);
+
+/***/ }),
+
+/***/ "./src/client.js":
+/*!***********************!*\
+  !*** ./src/client.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! node-fetch */ "node-fetch");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
+/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+const link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_1__["createHttpLink"])({
+  uri: 'https://glikaki.herokuapp.com/v1/graphql',
+  fetch: node_fetch__WEBPACK_IMPORTED_MODULE_0___default.a
+});
+const resolvers = {};
+const cache = new apollo_boost__WEBPACK_IMPORTED_MODULE_2__["InMemoryCache"]();
+const client = new apollo_boost__WEBPACK_IMPORTED_MODULE_2__["ApolloClient"]({
+  cache,
+  link,
+  resolvers
+});
+/* harmony default export */ __webpack_exports__["default"] = (client);
+
+/***/ }),
+
+/***/ "./src/queries.js":
+/*!************************!*\
+  !*** ./src/queries.js ***!
+  \************************/
+/*! exports provided: MAIN_QUERY, MAIN_QUERY_CACHE, ARTISTS_QUERY */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAIN_QUERY", function() { return MAIN_QUERY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAIN_QUERY_CACHE", function() { return MAIN_QUERY_CACHE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ARTISTS_QUERY", function() { return ARTISTS_QUERY; });
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
+ // export const MAIN_QUERY = gql`{
+//     Artist {
+//       Name
+//       ArtistId
+//     }
+// }`;
+
+const MAIN_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  query($artistId: Int ) {
+    Artist(where: {ArtistId: {_eq: $artistId}}){
+      Name
+      ArtistId
+    }
+  }
+`;
+const MAIN_QUERY_CACHE = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  query {
+    Artist {
+      Name
+      ArtistId
+    }
+  }
+`;
+const ARTISTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+  query {
+    Artist {
+      Name
+      ArtistId
+    }
+  }
+`; // const GET_DOG_PHOTO = gql`
+//   query Dog($breed: String!) {
+//     dog(breed: $breed) {
+//       id
+//       displayImage
+//     }
+//   }
+// `;
+// export const mainQueryCache = gql`{
+//   Artist @client {
+//     Name
+//     ArtistId
+//   }
+//   Album @client {
+//     Title
+//     AlbumId
+//   }
+// }
+// `;
 
 /***/ }),
 
@@ -186,6 +304,17 @@ const Artists = () => {
 
 module.exports = __webpack_require__(/*! /Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/pages/artists.js */"./pages/artists.js");
 
+
+/***/ }),
+
+/***/ "@apollo/react-hooks":
+/*!**************************************!*\
+  !*** external "@apollo/react-hooks" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@apollo/react-hooks");
 
 /***/ }),
 
@@ -219,6 +348,50 @@ module.exports = require("@material-ui/core/styles");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/lab");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
+
+/***/ }),
+
+/***/ "apollo-link-http":
+/*!***********************************!*\
+  !*** external "apollo-link-http" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-link-http");
+
+/***/ }),
+
+/***/ "graphql-tag":
+/*!******************************!*\
+  !*** external "graphql-tag" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql-tag");
+
+/***/ }),
+
+/***/ "node-fetch":
+/*!*****************************!*\
+  !*** external "node-fetch" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
 
 /***/ }),
 

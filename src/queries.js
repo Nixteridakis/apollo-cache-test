@@ -26,6 +26,15 @@ export const MAIN_QUERY_CACHE = gql`
   }
 `;
 
+export const ARTISTS_QUERY = gql`
+  query {
+    Artist {
+      Name
+      ArtistId
+    }
+  }
+`;
+
 // const GET_DOG_PHOTO = gql`
 //   query Dog($breed: String!) {
 //     dog(breed: $breed) {
@@ -35,14 +44,14 @@ export const MAIN_QUERY_CACHE = gql`
 //   }
 // `;
 
-export const mainQueryCache = gql`{
-  Artist @client {
-    Name
-    ArtistId
-  }
-  Album @client {
-    Title
-    AlbumId
-  }
-}
-`;
+// export const mainQueryCache = gql`{
+//   Artist @client {
+//     Name
+//     ArtistId
+//   }
+//   Album @client {
+//     Title
+//     AlbumId
+//   }
+// }
+// `;

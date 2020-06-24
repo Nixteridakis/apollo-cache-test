@@ -30,6 +30,7 @@ const App = () => {
     setArtist(myCache.Artist[0].Name)
   }
 
+
   return (
     <UserContext.Provider value={[store,setStore]}>
       <div className="App">
