@@ -59057,10 +59057,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js!./":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js ***!
-  \****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js!./":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js ***!
+  \************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -69959,16 +69959,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./queries */ "./src/queries.js");
-/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./client */ "./src/client.js");
-/* harmony import */ var _Myradio__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Myradio */ "./src/Myradio.js");
-/* harmony import */ var _Myresult_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Myresult.js */ "./src/Myresult.js");
-/* harmony import */ var _UserContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./UserContext */ "./src/UserContext.js");
-var _jsxFileName = "/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/src/App.js";
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./queries */ "./src/queries.js");
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./client */ "./src/client.js");
+/* harmony import */ var _Myradio__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Myradio */ "./src/Myradio.js");
+/* harmony import */ var _Myresult_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Myresult.js */ "./src/Myresult.js");
+/* harmony import */ var _UserContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./UserContext */ "./src/UserContext.js");
+var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/App.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -69990,15 +69992,15 @@ const App = () => {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const {
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_4__["MAIN_QUERY"], {
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_5__["MAIN_QUERY"], {
     variables: {
       artistId: store
     }
   });
 
   const ReadmyQyery = id => {
-    const myCache = _client__WEBPACK_IMPORTED_MODULE_5__["default"].readQuery({
-      query: _queries__WEBPACK_IMPORTED_MODULE_4__["MAIN_QUERY"],
+    const myCache = _client__WEBPACK_IMPORTED_MODULE_6__["default"].readQuery({
+      query: _queries__WEBPACK_IMPORTED_MODULE_5__["MAIN_QUERY"],
       variables: {
         artistId: id
       }
@@ -70006,7 +70008,7 @@ const App = () => {
     setArtist(myCache.Artist[0].Name);
   };
 
-  return __jsx(_UserContext__WEBPACK_IMPORTED_MODULE_8__["UserContext"].Provider, {
+  return __jsx(_UserContext__WEBPACK_IMPORTED_MODULE_9__["UserContext"].Provider, {
     value: [store, setStore],
     __source: {
       fileName: _jsxFileName,
@@ -70027,13 +70029,13 @@ const App = () => {
       lineNumber: 37
     },
     __self: undefined
-  }, " Select an artist"), __jsx(_Myradio__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, " Select an artist"), __jsx(_Myradio__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: undefined
-  }), __jsx(_Myresult_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx(_Myresult_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
     data: data,
     __source: {
       fileName: _jsxFileName,
@@ -70092,7 +70094,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App */ "./src/App.js");
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./client */ "./src/client.js");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-var _jsxFileName = "/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/src/Index.js";
+var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/Index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -70131,96 +70133,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _UserContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserContext */ "./src/UserContext.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
-/* harmony import */ var _material_ui_core_Radio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Radio */ "./node_modules/@material-ui/core/esm/Radio/index.js");
-/* harmony import */ var _material_ui_core_RadioGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/RadioGroup */ "./node_modules/@material-ui/core/esm/RadioGroup/index.js");
-/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/FormControlLabel */ "./node_modules/@material-ui/core/esm/FormControlLabel/index.js");
-/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/FormControl */ "./node_modules/@material-ui/core/esm/FormControl/index.js");
-var _jsxFileName = "/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/src/Myradio.js";
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/Myradio.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
-
-
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(theme => ({
-  rootz: {
-    color: '#ffffff'
-  }
-}));
-
 const Myradio = () => {
-  const classes = useStyles();
   const {
     0: store,
     1: setStore
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_UserContext__WEBPACK_IMPORTED_MODULE_1__["UserContext"]);
-  return __jsx(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["FormControl"], {
     component: "fieldset",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 12
     },
     __self: undefined
-  }, __jsx(_material_ui_core_RadioGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["RadioGroup"], {
     default: "1",
-    "aria-label": "gender",
+    "aria-label": "choices",
     name: "choices",
     value: store,
     onChange: () => setStore(event.target.value),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 13
     },
     __self: undefined
-  }, __jsx(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["FormControlLabel"], {
     value: "1",
-    control: __jsx(_material_ui_core_Radio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    control: __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Radio"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 14
       },
       __self: undefined
     }),
     label: "First",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 14
     },
     __self: undefined
-  }), __jsx(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["FormControlLabel"], {
     value: "2",
-    control: __jsx(_material_ui_core_Radio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    control: __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Radio"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 15
       },
       __self: undefined
     }),
     label: "Second",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 15
     },
     __self: undefined
-  }), __jsx(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["FormControlLabel"], {
     value: "3",
-    control: __jsx(_material_ui_core_Radio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    control: __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Radio"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 16
       },
       __self: undefined
     }),
     label: "Third",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 16
     },
     __self: undefined
-  })));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Myradio);
@@ -70240,7 +70234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _UserContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserContext */ "./src/UserContext.js");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
-var _jsxFileName = "/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/src/Myresult.js";
+var _jsxFileName = "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/src/Myresult.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -70423,14 +70417,14 @@ const mainQueryCache = graphql_tag__WEBPACK_IMPORTED_MODULE_1___default()(_templ
 
 /***/ }),
 
-/***/ 2:
-/*!********************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js ***!
-  \********************************************************************************************************************************************************/
+/***/ 1:
+/*!****************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -70446,5 +70440,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

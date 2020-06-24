@@ -4102,7 +4102,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/marinoschrysanthou/Desktop/nextjs-apollo-connect-test/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/marinoschrysanthou/Funke Development/tests/nextjs-apollo-connect-test/.next");
       return error;
     }
 

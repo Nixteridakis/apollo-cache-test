@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Button } from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles'
 
 import { useQuery } from '@apollo/react-hooks';
 import Link from 'next/link' ;
@@ -12,7 +13,6 @@ import Myresult from './Myresult.js'
 import { UserContext } from './UserContext';
 
 const App = () => {
-
   const [store, setStore] = useState([]);
   const [cachedArtist, setArtist] = useState('');
 
@@ -41,7 +41,9 @@ const App = () => {
         <Button variant="contained" onClick={()=> ReadmyQyery('2')}>Read Cached Artist 2</Button>
         <Button variant="contained" onClick={()=> ReadmyQyery('3')}>Read Cached Artist 3</Button>
         <div>Cached: {cachedArtist} </div>
-            
+        {/* <Link className={classes.nextPage} href="/artists">
+          <Button variant="outlined" color="secondary">See all Artists</Button>
+        </Link> */}
       </div>
     </UserContext.Provider>
   );

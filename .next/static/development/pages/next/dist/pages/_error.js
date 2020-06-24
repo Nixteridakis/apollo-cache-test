@@ -1966,10 +1966,10 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2462,14 +2462,14 @@ module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f
 
 /***/ }),
 
-/***/ 1:
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \******************************************************************************************************************************************************************************************************************/
+/***/ 2:
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \**************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FDesktop%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fmarinoschrysanthou%2FFunke%20Development%2Ftests%2Fnextjs-apollo-connect-test%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
 
 
 /***/ }),
@@ -2485,5 +2485,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map
